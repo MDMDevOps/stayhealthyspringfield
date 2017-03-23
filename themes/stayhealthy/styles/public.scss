@@ -17,3 +17,31 @@
 	margin-bottom: 4.5rem;
 	padding: 0;
 }
+
+.recent_posts {
+
+	.excerpt-thumbnail {
+		margin-bottom: 1.618rem;
+		margin: -1px -1px 1.618rem;
+	}
+	.excerpt-title {
+		font-size: 1rem;
+		line-height: 1.4;
+		padding: 0 .809rem;
+	}
+	article {
+		margin-bottom: 1.618rem;
+		position: relative;
+		padding-bottom: 40px;
+		border: 1px solid $border-color;
+		overflow: hidden;
+		footer {
+			position: absolute;
+			bottom: -1px;
+			right: -1px;
+			.button {
+				border-radius: 0;
+			}
+		}
+	}
+}

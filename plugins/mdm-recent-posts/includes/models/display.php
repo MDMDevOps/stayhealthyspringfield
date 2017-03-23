@@ -59,7 +59,7 @@ class Display extends \Mdm\Recent_Posts {
 		    $atts['tag'] = Utilities::parse_terms_from_string( $atts['tag'], 'post_tag' );
 		}
 		// Next, We check to see if we are trying to parse category from current page slug
-		if( in_array( -1, $atts['cat'] ) ) {
+		if( !empty( $atts['cat'] ) && in_array( -1, $atts['cat'] ) ) {
 			// Get the position of the special placeholder
 			$placeholder_position = array_search( -1, $atts['cat'] );
 			// Remove our placeholder

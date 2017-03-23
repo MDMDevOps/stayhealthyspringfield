@@ -19,10 +19,9 @@
 					</header>
 					<div class="excerpt-content" itemprop="text articleBody">
 						<h5 class="excerpt-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h5>
-						<?php echo wp_trim_words( get_the_excerpt(), 12, '' ); ?>
 					</div>
 					<footer class="excerpt-footer">
-						<a href="<?php the_permalink(); ?>"><?php _e( 'Read More', 'mpress-child' ); ?></a>
+						<a class="button button--block" href="<?php the_permalink(); ?>"><?php _e( 'Read More', 'mpress-child' ); ?></a>
 					</footer>
 				</article>
 			</div>
