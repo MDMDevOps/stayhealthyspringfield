@@ -1,0 +1,42 @@
+/* Public.css */
+$font-color: #242424;
+$breakpoints: (
+    xs : 481px,
+    sm : 641px,
+    md : 769px,
+    lg : 961px,
+    xl : 1201px,
+    hd : 1441px,
+);
+$gutter : .809rem;
+$gridcols : 60;
+
+
+@import 'modules/prism';
+.styleguide {
+    .display {
+        outline: 1px solid #f1f1f1;
+        border-radius: 3px;
+        padding: 1rem;
+        margin-bottom: 1.618em;
+        &:before {
+            content: 'example';
+            display: block;
+            clear: both;
+            font-weight: 600;
+            color: lighten( $font-color, 65% );
+            padding-bottom: 10px;
+            border-bottom: 1px dotted #f1f1f1;
+            margin-bottom: 10px;
+        }
+        .gistdisplay {
+            margin-bottom: 0;
+        }
+        .gist .gist-file {
+            margin-bottom: 0;
+        }
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
