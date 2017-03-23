@@ -1,0 +1,90 @@
+@import 'modules/mixins';
+@import 'modules/variables';
+
+
+.mdm_ads_manager {
+	.add-margin {
+		&-bottom {
+			margin-bottom: 1.618rem !important;
+		}
+		&-top {
+			margin-top: 1.618rem !important;
+		}
+		&-left {
+			margin-left: 1.618rem !important;
+		}
+		&-right {
+			margin-right: 1.618rem !important;
+		}
+	}
+	&.metabox {
+		@import 'modules/grid';
+		@import 'libs/sumoselect';
+		.SumoSelect {
+			width: 100%;
+			> .optWrapper {
+				> .options  {
+					li.opt {
+						margin: 0;
+						padding: 0;
+						&.child-1 {
+							margin-left: .809rem;
+						}
+						&.child-2 {
+							margin-left: .809rem * 2;
+						}
+						&.child-3 {
+							margin-left: .809rem * 3;
+						}
+						&.child-4 {
+							margin-left: .809rem * 4;
+						}
+						&.child-5 {
+							margin-left: .809rem * 5;
+						}
+					}
+				}
+			}
+		}
+		input[type="text"] {
+			box-sizing: border-box;
+			line-height: 2.5rem;
+			height: 2.5rem;
+			padding: 0.5rem;
+			border: 1px solid #cacaca;
+			border-radius: 0;
+			background-color: #fefefe;
+			font-size: 1rem;
+			font-weight: normal;
+			color: #0a0a0a;
+		}
+		label {
+			line-height: 2.5rem;
+		}
+	}
+	.input-group {
+		display: table;
+		width: 100%;
+		.input-group-field {
+			border-radius: 0;
+			height: 2.5rem;
+		}
+		.input-group-cell {
+			display: table-cell;
+		}
+		.input-group-button {
+			display: table-cell;
+		}
+		input, button {
+			height: 2.5rem !important;
+			padding-top: 0;
+			padding-bottom: 0;
+			vertical-align: top;
+		}
+		button, .button, .button-primary {
+			border: none;
+			box-shadow: none;
+			border-radius: 0;
+		}
+	}
+}

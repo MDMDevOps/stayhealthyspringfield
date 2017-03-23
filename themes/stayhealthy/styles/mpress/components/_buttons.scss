@@ -1,0 +1,83 @@
+/* -----------------------------------------------------------------------------
+ *                          ____        __  __
+ *                         / __ )__  __/ /_/ /_____  ____  _____
+ *                        / __  / / / / __/ __/ __ \/ __ \/ ___/
+ *                       / /_/ / /_/ / /_/ /_/ /_/ / / / (__  )
+ *                      /_____/\__,_/\__/\__/\____/_/ /_/____/
+ *
+ * ---------------------------------------------------------------------------*/
+button {
+    display: inline-block;
+    line-height: $line-spacing * 1.25;
+    text-align: center;
+    text-transform: none;
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: $button-border-radius;
+    transition: all .25s ease-in-out;
+    padding: 0 $spacing;
+    color: $button-color;
+    background: $button-background-color;
+    border: $button-border;
+    position: relative;
+    &:hover, &:focus {
+        background: darken( $button-background-color, 5% );
+        border-color: darken( $button-border-color, 5% );
+    }
+    &:active {
+        bottom: -1px;
+    }
+}
+input[type='submit'], .button {
+    @extend button;
+}
+
+.ghost-button {
+    @extend button;
+    border: 3px solid $button-border-color;
+    background: transparent;
+    &:hover, &:focus {
+        background: transparent;
+    }
+}
+ul.pagination, .entry-content ul.pagination {
+    list-style: none inside;
+    list-style-type: none;
+    list-style-position: inside;
+    padding: 0;
+    margin: 0;
+    li {
+        display: inline-block;
+        border-right: 1px solid $border-color;
+        &.current {
+            background: $button-background-color;
+            a, a:link {
+                color: $button-color;
+                border-top: 1px solid $button-background-color;
+                border-bottom: 1px solid $button-background-color;
+                &:hover, &:focus {
+                    background: darken( $button-background-color, 5% );
+                    border-top: 1px solid darken( $button-background-color, 5% );
+                    border-bottom: 1px solid darken( $button-background-color, 5% );
+                }
+            }
+        }
+        &:first-child {
+            border-left: 1px solid $border-color;
+            border-radius: $border-radius 0 0 $border-radius;
+        }
+        &:last-child {
+            border-radius: 0 $border-radius $border-radius 0;
+        }
+    }
+    a, a:link {
+        line-height: $line-spacing;
+        display: block;
+        padding: 0 $spacing;
+        border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+        &:hover, &:focus {
+            background: darken( $border-color, 5% );
+        }
+    }
+}

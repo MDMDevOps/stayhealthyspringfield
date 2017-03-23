@@ -1,0 +1,91 @@
+#colophon {
+	background-color: $primary-color;
+	text-align: center;
+	color: #fff;
+	margin: 0 -.809rem;
+	width: auto;
+	min-width: 100%;
+	padding-bottom: 2.4rem;
+	a, a:link {
+		color: #fff;
+	}
+	.social {
+		li {
+			display: inline-block;
+			padding: 0 .809rem;
+		}
+		a, a:link {
+			display: block;
+		}
+		.icon {
+			width: 1.25em;
+			text-align: center;
+			font-size: 1.618rem;
+		}
+		li.facebook {
+			a:hover, a:focus {
+				color: $facebook-color;
+			}
+		}
+		li.twitter {
+			a:hover, a:focus {
+				color: $twitter-color;
+			}
+		}
+		li.youtube {
+			a:hover, a:focus {
+				color: $youtube-color;
+			}
+		}
+		li.linkedin {
+			a:hover, a:focus {
+				color: $linkedin-color;
+			}
+		}
+	}
+	@include breakpoint( $menu-breakpoint ) {
+		padding-bottom: 1.618rem;
+	}
+}
+#scrolltop {
+	position: fixed;
+	font-size: 2rem;
+	bottom: 2em;
+	right: 1em;
+	line-height: 1;
+	display: inline-block;
+	background: $primary-color;
+	color: #fff;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	border-radius: 50%;
+	visibility: hidden;
+	opacity: 0;
+	transform: translate3d( 0, 1em, 0 );
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	transition: opacity .3s ease, transform .3s ease, box-shadow .3s cubic-bezier( .25, .8, .25, 1 );
+	@include breakpoint( $menu-breakpoint ) {
+		bottom: 1em
+	}
+	&:hover, &:focus {
+		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	}
+	&.scrollingDown, &.scrollDown {
+		opacity: 1;
+		visibility: visible;
+		transform: translate3d( 0, 0, 0 );
+	}
+	&.scrollingUp {
+		visibility: visible;
+	}
+	&.bottom {
+		position: absolute;
+		bottom: 1.3em;
+	}
+
+}
+.scrollwrapper {
+	position: relative;
+	margin: -.809rem;
+}

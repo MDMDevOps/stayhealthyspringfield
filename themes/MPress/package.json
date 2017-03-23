@@ -1,0 +1,21 @@
+{
+  "name": "Mpress",
+  "description": "Wordpress Starter Theme",
+  "license": "GPL-2.0",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/npm/npm.git"
+  },
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-autoprefixer": "latest",
+    "grunt-contrib-clean": "latest",
+    "grunt-contrib-compass": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-newer": "latest",
+    "grunt-openport": "latest"
+  }
+}

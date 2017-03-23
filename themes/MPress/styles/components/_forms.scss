@@ -1,0 +1,73 @@
+/* -----------------------------------------------------------------------------
+ *                        ______
+ *                       / ____/___  _________ ___  _____
+ *                      / /_  / __ \/ ___/ __ `__ \/ ___/
+ *                     / __/ / /_/ / /  / / / / / (__  )
+ *                    /_/    \____/_/  /_/ /_/ /_/____/
+ *
+ * ---------------------------------------------------------------------------*/
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="color"],
+textarea {
+    display: block;
+    margin: 0 0 $spacing;
+    width: 100%;
+    line-height: $line-spacing;
+    border-radius: $border-radius;
+    transition: all .25s ease-in-out;
+    appearance: none;
+    padding: #{ ( $line-spacing / 4 ) }em #{ ( $line-spacing / 2 ) }em;
+    border: 1px solid $border-color;
+}
+select {
+	padding: #{ ( $line-spacing / 4 ) }em #{ ( $line-spacing / 2 ) }em;
+	margin: 0 0 $spacing;
+}
+
+.input-group {
+    position: relative;
+    display: table;
+    margin: 0 0 1.618rem;
+    border-collapse: separate;
+    input {
+        margin: 0;
+        border-radius: 2px 0 0 2px;
+        background-clip: padding-box;
+        box-sizing: border-box;
+    }
+    .input-group, .form-input, .input-group-button {
+        display: table-cell;
+    }
+    .input-group-button {
+        position: relative;
+        // font-size: 0;
+        width: 1%;
+        white-space: nowrap;
+        vertical-align: middle;
+        > button, > .button {
+            margin-left: -1px;
+            position: relative;
+            border-radius: 0 2px 2px 0;
+            background-clip: padding-box;
+        }
+    }
+}
+
+label, .label {
+    display: block;
+    margin: 0 0 .3em;
+    line-height: $line-spacing;
+}

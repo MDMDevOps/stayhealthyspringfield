@@ -1,0 +1,250 @@
+#masthead {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    @include clearfix();
+    .site-branding {
+        float: left;
+        @include clearfix();
+        h1, h2 {
+            font-size: 3rem;
+            line-height: 1.5em;
+            padding: 0;
+            margin: 0;
+            white-space: nowrap;
+            &.has-logo {
+                font-size: 1rem;
+                line-height: 1rem;
+            }
+        }
+    }
+    .menu-toggle {
+        float: right;
+        margin-left: auto;
+        background: transparent;
+        font-size: 2em;
+        padding: 0 1em;
+        border: 0;
+    }
+    @include breakpoint( $menu-breakpoint ) {
+        .menu-toggle {
+            display: none;
+        }
+        .dropdown-toggle {
+            display: none;
+        }
+    }
+}
+nav.navigation-menu {
+    .dropdown {
+        display: block;
+        width: 100%;
+    }
+    ul.menu, .menu > ul {
+        width: 100%;
+        margin: 0;
+        padding: 1em 0 1.618em;
+    }
+    li {
+        display: block;
+        position: relative;
+        ul.sub-menu {
+            list-style: none;
+            display: block;
+            height: 0;
+            text-align: left;
+            position: absolute;
+            width: 100%;
+            min-width: 100%;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .4s ease;
+            padding-left: 1.618em;
+            // Generic styles to sub-menu items
+            li {
+                display: block;
+            }
+            &.focused {
+                position: relative;
+                visibility: visible;
+                opacity: 1;
+                height: auto;
+            }
+        }
+    }
+    a, a:link {
+        display: block;
+        padding: .809em 1.618em .809em;
+    }
+}
+#site-navigation {
+    display: none;
+    @include clearfix;
+    &.open, &.closing {
+        display: block;
+    }
+    &.dropdown {
+        width: 100%;
+        clear:both;
+    }
+    ul.menu, .menu > ul {
+        width: 100%;
+        margin: 0;
+        padding: 1em 0 1.618em;
+    }
+    li {
+        display: block;
+        position: relative;
+        ul.sub-menu {
+            list-style: none;
+            display: block;
+            height: 0;
+            text-align: left;
+            position: absolute;
+            width: 100%;
+            min-width: 100%;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .4s ease;
+            padding-left: 1.618em;
+            // Generic styles to sub-menu items
+            li {
+                display: block;
+            }
+            &.focused {
+                position: relative;
+                visibility: visible;
+                opacity: 1;
+                height: auto;
+            }
+        }
+    }
+    a, a:link {
+        display: block;
+        padding: .809em 1.618em .809em;
+    }
+
+/***************************************************************************
+ *                    Awesome Sauce Styles for Desktop                     *
+ ***************************************************************************/
+
+    @include breakpoint( $menu-breakpoint ) {
+        display: block;
+        &.dropdown {
+            float: right;
+            width: auto;
+            clear: none;
+            opacity: 1;
+            height: auto;
+            max-height: none;
+            visibility: visible;
+            transition: all .3s ease;
+            &.closing, &.closed {
+                visibility: visible;
+                opacity: 1;
+                max-height: none;
+                height: auto;
+            }
+        }
+        // Generic styles for all list items
+        li {
+            position: relative;
+            white-space: nowrap;
+            // Generic styles for all sub-menus
+            ul.sub-menu {
+                position: absolute !important;
+                width: auto;
+                min-width: 100%;
+                padding: 0;
+                height: 0;
+                transform: translateY( -1em );
+                transition: transform .3s linear, opacity .4s linear;
+                // Generic styles to sub-menu items
+                li {
+                    display: block;
+                }
+                &.focused {
+                    transition: transform .3s linear, opacity .4s linear;
+                    visibility: visible;
+                    opacity: 1;
+                    height: auto;
+                    transform: translateY( 0 );
+                }
+            }
+            // Hover classes
+            &:hover, &:focus {
+                > ul.sub-menu {
+                    transition: transform .3s linear, opacity .4s linear;
+                    visibility: visible;
+                    opacity: 1;
+                    height: auto;
+                    transform: translateY( 0 );
+                }
+            }
+            // Mouseless classes
+            ul.sub-menu.focused {
+                transition: transform .3s linear, opacity .4s linear;
+                visibility: visible;
+                opacity: 1;
+                height: auto;
+                transform: translateY( 0 );
+            }
+        }
+        // Generic style for all links in the nav
+        a {
+            display: block;
+            padding: .404em;
+        }
+        // Specific styles for top level (navbar) menu
+        ul.menu {
+            display: block;
+            white-space: nowrap;
+            padding: 0;
+            margin: 0;
+            @include flexbox( 'row' );
+            // Level list items (the nav bar items)
+            > li {
+                display: inline-block;
+                zoom: 1;
+                margin: 0;
+                &:first-child {
+                    margin-left: 0;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+                // Level 2 drop down menu
+                > ul.sub-menu {
+                    left: 0;
+                    // Level 3 drop down menu
+                    > li > ul.sub-menu {
+                        top: 0;
+                        right: 100%;
+                        // Level 4 drop down menu
+                        > li > ul.sub-menu {
+                            top: 0;
+                            right: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    } // end breakpoint
+} // end #site-navigation
+.dropdown-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .809em 1.618em;
+    background: transparent;
+    transition: transform .3s ease;
+    border: none;
+    &:hover, &:focus {
+        background: transparent;
+    }
+    &:active {
+        bottom: auto;
+    }
+}

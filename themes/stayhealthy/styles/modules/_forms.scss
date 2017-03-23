@@ -1,0 +1,6 @@
+.nolabel {
+	label {
+		@include invisible();
+	}
+}
+

@@ -1,0 +1,19 @@
+/*------------------------------------------------------------------------------
+ * Copy parent scss from Mpress, to freeze css version on theme updates
+ * -------------------------------------------------------------------------- */
+@import 'modules/variables';
+@import 'mpress/public';
+@import 'modules/masthead';
+@import 'modules/colophon';
+@import 'modules/widgets';
+@import 'modules/content';
+@import 'modules/forms';
+
+#page, #masthead {
+	padding: 0 .809rem;
+}
+
+#primary {
+	margin-bottom: 4.5rem;
+	padding: 0;
+}

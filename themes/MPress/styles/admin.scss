@@ -1,0 +1,75 @@
+@import 'modules/variables';
+@import 'modules/mixins';
+@font-face {
+  font-family: 'mpress-admin-icomoon';
+  src:  url('../../fonts/mpress-admin-icomoon.eot?1jh44c');
+  src:  url('../../fonts/mpress-admin-icomoon.eot?1jh44c#iefix') format('embedded-opentype'),
+    url('../../fonts/mpress-admin-icomoon.ttf?1jh44c') format('truetype'),
+    url('../../fonts/mpress-admin-icomoon.woff?1jh44c') format('woff'),
+    url('../../fonts/mpress-admin-icomoon.svg?1jh44c#mpress-admin-icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class*="mpress-icon"], [class*="mpress-icon"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'mpress-admin-icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.mce-i-mpress-icon-presets:before {
+  content: "\e900";
+}
+.mpress-modal {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 99999;
+	display: none;
+	background: rgba(0, 0, 0, 0.55);
+	overflow: scroll;
+	.modal-panel {
+		background: #fff;
+		width: 90%;
+		max-width: 1170px;
+		margin: 100px auto 0;
+		min-height: 300px;
+		overflow: auto;
+		margin-bottom: 10%;
+		position: relative;
+		.modal-header {
+			position: relative;
+			margin-bottom: .809em;
+			@include clearfix;
+			button.close {
+				border: none !important;
+			    right: 0;
+			    background: #f1f1f1;
+			    color: rgba(86, 79, 79, 0.49);
+			    float: right;
+			}
+		}
+		.modal-body {
+			@include clearfix;
+			padding: 0 1.618em 1.618em;
+		}
+		.modal-footer {
+			@include clearfix;
+			padding: 0 1.618em 1.618em;
+			button {
+				margin-left: 1rem;
+			}
+		}
+	}
+}

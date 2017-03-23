@@ -1,0 +1,68 @@
+/*------------------------------------------------------------------------------
+ * Globals - alternatively, modules/_global.scss could be imported by itself
+ * -------------------------------------------------------------------------- */
+@import 'modules/variables';
+@import 'modules/mixins';
+@import 'modules/equalize';
+@import 'modules/toolbox';
+@import 'modules/grid';
+@import 'modules/wordpress';
+/*------------------------------------------------------------------------------
+ * Vendors - Import high up, to allow cascading to override
+ * -------------------------------------------------------------------------- */
+// Not importing any vendors right now...
+/*------------------------------------------------------------------------------
+ * Generic Web Elements - All standard HTML Components
+ * -------------------------------------------------------------------------- */
+@import 'components/forms';
+@import 'components/buttons';
+@import 'components/hyperlinks';
+@import 'components/lists';
+@import 'components/typography';
+@import 'components/tables';
+@import 'components/embeds'; // images, video, etc
+/*------------------------------------------------------------------------------
+ * Scaffolding Components - Specific layout dependent options
+ * -------------------------------------------------------------------------- */
+@import 'components/structure';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/widgets';
+@import 'components/offcanvas';
+@import 'components/comments';
+/*------------------------------------------------------------------------------
+ * Basic Scaffolding
+ * -------------------------------------------------------------------------- */
+html {
+    width: 100%;
+    height: 100%;
+}
+body {
+    position: relative;
+    font: normal normal normal 1rem/1.618em $sans;
+    width: 100%;
+    color: $font-color;
+    overflow: hidden;
+    word-wrap: break-word;
+    &.custom-background {
+        background-size: cover;
+    }
+}
+
+#page {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+#content {
+    margin: 0 auto;
+}
+#primary {
+	max-width: $view-width;
+	margin: 0 auto;
+	@include clearfix();
+	&.full-width {
+		max-width: none;
+	}
+}

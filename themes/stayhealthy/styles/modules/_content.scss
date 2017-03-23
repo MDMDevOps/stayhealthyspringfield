@@ -1,0 +1,6 @@
+.entry-content {
+	@include breakpoint( 'md' ) {
+		font-size: 1.2rem;
+		// font-weight: 300;
+	}
+}

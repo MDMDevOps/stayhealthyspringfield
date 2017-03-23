@@ -1,0 +1,46 @@
+.comment-list {
+	li.comment {
+		border: 1px solid $border-color;
+		padding: 1.618rem;
+		margin-bottom: 1.618rem;
+		position: relative;
+		.reply {
+			position: relative;
+		}
+		.comment-reply-link {
+			color: $button-color;
+			background: $button-background-color;
+			padding: .809rem 1.618rem;
+			display: block;
+			position: absolute;
+			right: -1.618rem;
+			bottom: -1.618rem;
+		}
+	}
+	.comment-header {
+		@include clearfix;
+		margin-bottom: 1.618rem;
+		span.author, span.meta, span.edit {
+			display: block;
+		}
+		span.meta, span.edit {
+			font-size: .85em;
+		}
+
+	}
+	.gravatar {
+		float: left;
+		margin-right: .809rem;
+	}
+    .comment-meta {
+        .comment-author {
+            img {
+                margin-right: ( $spacing / 2 );
+            }
+        }
+    }
+    .comment-metadata {
+        position: relative;
+        left: calc( 64px + .809em );
+    }
+}
