@@ -61,7 +61,7 @@
 				</div>
 			</div>
 			<?php if( is_front_page() ) : ?>
-				<div id="hero" style="background-image: url( <?php header_image(); ?> );">
+				<div id="hero">
 					<?php if ( is_active_sidebar( 'homepage-masthead-widget-area' ) ) : ?>
 						<div class="widget-area">
 							<div class="wrapper">

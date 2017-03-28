@@ -98,6 +98,15 @@ if ( !function_exists( 'mpress_add_sidebars' ) ) {
     			'before_title'  => '<h4 class="widget-title">',
     			'after_title'   => '</h4>'
     		),
+    		'masthead-home' => array(
+    			'name'          => __( 'Homepage Masthead Widgets', 'mpress-child' ),
+    			'id'            => 'homepage-masthead-widget-area',
+    			'before_widget' => '<div id="%1$s" class="widget group %2$s">',
+    			'after_widget'  => "</div>",
+    			'before_title'  => '<h4 class="widget-title">',
+    			'after_title'   => '</h4>'
+    		),
+
     		'after-content-widget-area' => array(
     			'name'          => __( 'After Content Widgets', 'mpress-child' ),
     			'id'            => 'after-content-widget-area',
@@ -255,3 +264,17 @@ function populate_gforms_category_fields( $value ) {
     return $category->name;
 }
 add_filter( 'gform_field_value_category', 'populate_gforms_category_fields' );
+
+function place_rev_slider( $alias ) {
+	if( class_exists( 'RevSlider' ) ) {
+		// Instantiate rev slider
+		$rev_slider = new RevSlider();
+		// Get all aliases
+		$sliders = $rev_slider->getAllSliderAliases();
+		// If alias exists, place it
+		if( in_array( trim( $alias ), $sliders ) ) {
+			putRevSlider( $alias );
+		}
+	}
+}
+add_action( 'place_rev_slider', 'place_rev_slider' );

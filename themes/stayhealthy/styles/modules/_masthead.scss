@@ -6,16 +6,16 @@
 			background-position: 50% 50%;
 			background-size: cover;
 			background-repeat: no-repeat;
-			min-height: 250px;
-			padding: 2.5rem 0;
+			// min-height: 250px;
+			// padding: 2.5rem 0;
 			text-align: center;
 			font-size: 1.25em;
 			margin: 0 -.809rem 1.618rem;
 			@include breakpoint( 'sm' ) {
-				min-height: 350px;
+				// min-height: 350px;
 			}
 			@include breakpoint( 'lg' ) {
-				min-height: 500px;
+				// min-height: 500px;
 			}
 		}
 	}
