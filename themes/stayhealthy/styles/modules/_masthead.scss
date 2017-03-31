@@ -46,6 +46,8 @@
 		}
 		a, a:link {
 			text-transform: uppercase;
+			font-size: 1.2rem;
+			    padding: .404rem .809em;
 			&:hover, &:focus {
 				background: $primary-color;
 				color: #fff;
